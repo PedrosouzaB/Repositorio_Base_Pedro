@@ -1,0 +1,10 @@
+import json
+
+dados_json = '{"produto":"Caderno", "preco": 12.5, "estoque": 30}'
+
+# Converte JSON para dicionário
+dados_dict = json.loads(dados_json)
+
+# Acessa e imprime os valores
+print("Produto:", dados_dict["produto"])
+print("Preço:", dados_dict["preco"])
