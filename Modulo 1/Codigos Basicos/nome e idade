@@ -1,0 +1,3 @@
+nome = "pedro"
+idade = 15
+print("meu nome e´nome ,e minha idade é:" , idade)
