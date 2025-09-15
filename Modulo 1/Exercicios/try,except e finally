@@ -1,0 +1,10 @@
+try:
+    nome = input("Digite seu nome: ")
+    print(nome)
+    idade = int(input("Digite sua idade:"))
+except ValueError as erro:
+   print("Vc digitou sua idade errada: ")
+except:
+    print("Vc digitou seu nome Certo: ")
+finally:
+    print(f" nome {nome} está certo")
