@@ -1,0 +1,5 @@
+import csv
+
+with open("aluno.csv","a", newline="") as arquivo:
+    escritor = csv.writer(arquivo)
+    escritor.writerow(["Elisa","18","8.0"])
