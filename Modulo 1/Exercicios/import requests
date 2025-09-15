@@ -1,0 +1,11 @@
+import requests
+
+url = "https://accounts.google.com/"
+resposta = requests.get(url)
+reporter = (resposta.status_code)
+try: 
+    if reporter == 200:
+        print("Servidor online ")
+  
+except:
+    print("Ocorreu um erro")
