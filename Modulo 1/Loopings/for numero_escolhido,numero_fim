@@ -1,0 +1,6 @@
+numero_escolhido = int(input("Que numero que voce não sabe irmão"))
+numero_inicio = int(input("Onde voce quer começar"))
+numero_fim = int(input("Onde voce quer terminar"))
+
+for i in range( numero_inicio , numero_fim ):
+        print(f"{i} x {numero_escolhido} = {i * numero_fim}")
