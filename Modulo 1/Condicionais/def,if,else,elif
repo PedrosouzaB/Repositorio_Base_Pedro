@@ -1,0 +1,23 @@
+
+def assistir_o_vasco():
+    print("Assistir o vasco ! Vaiii vascoooo!!!!")
+def parar_de_assistir_o_vasco():
+    print("Parei de assistir o Vasco (mentira)")
+def desistir_do_vasco():
+    print("Desisto do vasco serie B do caramba kkkkkk")
+def fazer_pergunta():
+    pergunta = input("como vc está torcendo pro vasco?")
+
+opcao = int(input("Escolha oq vc vai fazer: \n 1- Assitir o vasco \n 2- parar de assistir o vasco \n 3- Desisto do vasco serie B do caramba kkkkkk"))
+
+if opcao == 1:
+    assistir_o_vasco()
+    pergunta = int(input("Quer assistir o vasco,mesmo ele perdendo de 3x1??: \n 1- continuar assistindo vamooo vascooo \n 2- parar de assistir o vasco"))
+    if pergunta == 1:
+        assistir_o_vasco()
+    else:
+        parar_de_assistir_o_vasco()
+elif opcao == 2:
+    parar_de_assistir_o_vasco() 
+else:
+     desistir_do_vasco()
