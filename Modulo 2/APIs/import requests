@@ -1,0 +1,11 @@
+import requests
+
+# Fazemos uma requisição GET para um site de exemplo
+response = requests.get('https://github.com')
+print(response.status_code) # O status da requisição, 200 significa que deu certo
+status = (response.status_code)
+
+if status <= 299:
+   print(f"Tá dandoo On irmão, o status é {status}")
+else:
+   print(f"Tá dando errado irmão, o status é {status}")
