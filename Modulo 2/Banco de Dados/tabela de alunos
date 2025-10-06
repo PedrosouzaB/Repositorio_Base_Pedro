@@ -1,0 +1,33 @@
+import sqlite3
+
+# Conecta (ou cria) o banco de dados
+con = sqlite3.connect("alunos.db")
+cur = con.cursor()
+
+# Cria a tabela de alunos
+cur.execute("""
+CREATE TABLE IF NOT EXISTS alunos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT NOT NULL,
+    idade INTEGER,
+    serie TEXT,
+    nota REAL
+)
+""")
+
+# Insere alguns alunos
+cur.execute("INSERT INTO alunos (nome, idade, serie, nota) VALUES ('Pedro Souza', 15, '9º Ano', 8.5)")
+cur.execute("INSERT INTO alunos (nome, idade, serie, nota) VALUES ('Maria Oliveira', 14, '8º Ano', 9.2)")
+cur.execute("INSERT INTO alunos (nome, idade, serie, nota) VALUES ('João Silva', 16, '1º Ano', 7.8)")
+
+# Salva as alterações
+con.commit()
+
+# Mostra os alunos cadastrados
+print("=== Lista de Alunos ===")
+cur.execute("SELECT * FROM alunos")
+for aluno in cur.fetchall():
+    print(aluno)
+
+# Fecha o banco
+con.close()
